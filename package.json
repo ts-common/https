@@ -1,0 +1,50 @@
+{
+  "name": "@ts-common/https",
+  "version": "0.0.0",
+  "description": "Promisified HTTPS API",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "tsc && nyc mocha",
+    "prepack": "npm install && tsc"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.d.ts.map",
+    "index.js.map",
+    "index.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ts-common/https.git"
+  },
+  "keywords": [
+    "https",
+    "promise"
+  ],
+  "author": "Sergey Shandar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ts-common/https/issues"
+  },
+  "homepage": "https://github.com/ts-common/https#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.6",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "@types/node": "^10.11.6",
+    "tslib": "^1.9.3"
+  }
+}
