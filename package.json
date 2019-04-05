@@ -1,25 +1,29 @@
 {
   "name": "@ts-common/https",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Promisified HTTPS API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "tsc": "tsc",
-    "test": "tsc && nyc mocha",
+    "test": "tsc && nyc mocha ./dist/test/*.js",
     "prepack": "npm install && tsc"
   },
   "nyc": {
     "reporter": [
       "lcov",
       "text"
+    ],
+    "exclude": [
+      "dist/test/test.js"
     ]
   },
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "index.d.ts",
-    "index.d.ts.map",
-    "index.js.map",
-    "index.ts"
+    "dist/*.d.ts",
+    "dist/*.d.ts.map",
+    "dist/*.js.map",
+    "dist/*.js",
+    "src/*.ts"
   ],
   "repository": {
     "type": "git",
@@ -37,11 +41,11 @@
   "homepage": "https://github.com/ts-common/https#readme",
   "devDependencies": {
     "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.5",
+    "@types/mocha": "^5.2.6",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0",
-    "typescript": "^3.1.6"
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "typescript": "^3.4.1"
   },
   "dependencies": {
     "@types/node": "^10.12.2",
